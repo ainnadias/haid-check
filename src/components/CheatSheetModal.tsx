@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { X, Printer, Bookmark } from 'lucide-react';
 
 interface CheatSheetModalProps {
@@ -18,7 +18,17 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({ isOpen, onClos
       <div className="relative w-full max-w-3xl glass-panel rounded-3xl p-6 sm:p-8 bg-[#FDF0F5] dark:bg-[#1A0E17] border border-[#2D1B25]/15 dark:border-[#F06292]/30 shadow-2xl my-8">
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#2D1B25]/10 dark:border-[#F06292]/20 pb-4 mb-6">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
+            <img
+              src="./logo_haid-check.png"
+              alt="Logo Haid Check"
+              className="w-9 h-9 object-contain shrink-0 drop-shadow-xs dark:hidden"
+            />
+            <img
+              src="./logo-white_haid-check.png"
+              alt="Logo Haid Check"
+              className="w-9 h-9 object-contain shrink-0 drop-shadow-xs hidden dark:block"
+            />
             <div>
               <h3 className="text-base sm:text-lg font-bold text-[#2D1B25] dark:text-[#FDF0F8]">
                 Cheat Sheet: Rumus Inti Fiqih Haid Mazhab Syafi'i

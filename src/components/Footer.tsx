@@ -13,10 +13,19 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Credits */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#C2185B] dark:bg-[#F06292]" />
+            <div className="flex items-center gap-2.5">
+              <img
+                src="./logo_haid-check.png"
+                alt="Logo Haid Check"
+                className="w-7 h-7 object-contain dark:hidden"
+              />
+              <img
+                src="./logo-white_haid-check.png"
+                alt="Logo Haid Check"
+                className="w-7 h-7 object-contain hidden dark:block"
+              />
               <span className="font-bold text-sm sm:text-base text-[#2D1B25] dark:text-[#FDF0F8]">
-                Fiqih Haid Interaktif
+                Haid Check
               </span>
             </div>
             <p className="text-xs text-[#5C3A4E] dark:text-[#E8C5D8] leading-relaxed">
@@ -43,7 +52,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Footer: Back to Top & Links */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-[#2D1B25]/10 dark:border-[#F06292]/15 text-xs text-[#5C3A4E] dark:text-[#E8C5D8]">
           <div className="flex items-center gap-3">
-            <span>© {new Date().getFullYear()} Fiqih Haid Interaktif. Mazhab Syafi'i.</span>
+            <span>© {new Date().getFullYear()} Haid Check · Fiqih Haid Mazhab Syafi'i.</span>
           </div>
 
           <button

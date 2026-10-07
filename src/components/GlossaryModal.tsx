@@ -37,8 +37,17 @@ export const GlossaryModal: React.FC<GlossaryModalProps> = ({ isOpen, onClose })
       <div className="relative w-full max-w-lg h-full glass-panel bg-[#FDF0F5]/90 dark:bg-[#1A0E17]/90 border-l border-[#C2185B]/20 dark:border-[#F06292]/25 shadow-[0_0_60px_-12px_rgba(194,24,91,0.25)] flex flex-col p-6 overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#2D1B25]/10 dark:border-[#F06292]/15 pb-4 mb-4">
-          <div className="flex items-center gap-2">
-            {/* <BookOpen className="w-5 h-5 text-[#C2185B] dark:text-[#F06292]" /> */}
+          <div className="flex items-center gap-2.5">
+            <img
+              src="./logo_haid-check.png"
+              alt="Logo Haid Check"
+              className="w-7 h-7 object-contain shrink-0 drop-shadow-xs dark:hidden"
+            />
+            <img
+              src="./logo-white_haid-check.png"
+              alt="Logo Haid Check"
+              className="w-7 h-7 object-contain shrink-0 drop-shadow-xs hidden dark:block"
+            />
             <h3 className="text-base sm:text-lg font-bold text-[#2D1B25] dark:text-[#FDF0F8]">
               Glosarium Istilah Fiqih
             </h3>

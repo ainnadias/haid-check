@@ -75,10 +75,19 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Zone 1: Single element brand mark */}
           <a
             href="#hero"
-            className="text-lg md:text-xl font-bold tracking-tight text-[#2D1B25] dark:text-[#FDF0F8] flex items-center gap-2 cursor-pointer"
+            className="text-lg md:text-xl font-bold tracking-tight text-[#2D1B25] dark:text-[#FDF0F8] flex items-center gap-2.5 cursor-pointer group"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-[#C2185B] dark:bg-[#F06292]" />
-            Haid Check
+            <img
+              src="./logo_haid-check.png"
+              alt="Logo Haid Check"
+              className="w-8 h-8 object-contain transition-transform group-hover:scale-105 drop-shadow-xs dark:hidden"
+            />
+            <img
+              src="./logo-white_haid-check.png"
+              alt="Logo Haid Check"
+              className="w-8 h-8 object-contain transition-transform group-hover:scale-105 drop-shadow-xs hidden dark:block"
+            />
+            <span>Haid Check</span>
           </a>
 
           {/* Zone 2: Navigation Links */}

@@ -10,6 +10,7 @@ export const Hero: React.FC = () => {
       <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full blur-3xl pointer-events-none -z-10" style={{ background: 'radial-gradient(ellipse, rgba(194,24,91,0.07) 0%, transparent 70%)' }} />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
         {/* Unboxed Metadata Header */}
         <div className="flex items-center justify-center gap-2 text-xs md:text-sm font-medium text-[#5C3A4E] dark:text-[#E8C5D8] mb-4">
           <span>Kajian Mazhab Syafi'i</span>
