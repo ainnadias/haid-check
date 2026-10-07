@@ -1,0 +1,6 @@
+{
+  "name": "Fiqih Haid Interaktif",
+  "description": "Platform edukasi interaktif fiqih darah wanita (haid, istihadhah, nifas) mazhab Syafi'i berdasarkan resume kajian Ustadzah Jahidah Farhati, Lc.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
