@@ -19,7 +19,6 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({ isOpen, onClos
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#2D1B25]/10 dark:border-[#F06292]/20 pb-4 mb-6">
           <div className="flex items-center gap-2">
-            <Bookmark className="w-5 h-5 text-[#C2185B] dark:text-[#F06292]" />
             <div>
               <h3 className="text-base sm:text-lg font-bold text-[#2D1B25] dark:text-[#FDF0F8]">
                 Cheat Sheet: Rumus Inti Fiqih Haid Mazhab Syafi'i
@@ -31,14 +30,6 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({ isOpen, onClos
           </div>
 
           <div className="flex items-center gap-2">
-            <button
-              onClick={handlePrint}
-              className="p-2 rounded-xl border border-[#2D1B25]/15 dark:border-[#F06292]/25 text-[#2D1B25] dark:text-[#FDF0F8] hover:bg-white/80 text-xs flex items-center gap-1.5 cursor-pointer shadow-2xs"
-              title="Cetak lembar rumus"
-            >
-              <Printer className="w-4 h-4" />
-              <span className="hidden sm:inline">Cetak</span>
-            </button>
             <button
               onClick={onClose}
               className="p-2 rounded-xl text-[#2D1B25] dark:text-[#FDF0F8] hover:bg-black/5 dark:hover:bg-white/5 cursor-pointer"
@@ -157,11 +148,6 @@ export const CheatSheetModal: React.FC<CheatSheetModalProps> = ({ isOpen, onClos
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Footer Note */}
-        <div className="mt-6 pt-4 border-t border-[#2D1B25]/10 dark:border-[#F06292]/20 text-center text-[11px] text-[#5C3A4E] dark:text-[#E8C5D8]">
-          Simpan lembar ini sebagai rujukan cepat pencatatan siklus harianmu.
         </div>
       </div>
     </div>

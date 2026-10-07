@@ -38,7 +38,7 @@ export const GlossaryModal: React.FC<GlossaryModalProps> = ({ isOpen, onClose })
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[#2D1B25]/10 dark:border-[#F06292]/15 pb-4 mb-4">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-[#C2185B] dark:text-[#F06292]" />
+            {/* <BookOpen className="w-5 h-5 text-[#C2185B] dark:text-[#F06292]" /> */}
             <h3 className="text-base sm:text-lg font-bold text-[#2D1B25] dark:text-[#FDF0F8]">
               Glosarium Istilah Fiqih
             </h3>

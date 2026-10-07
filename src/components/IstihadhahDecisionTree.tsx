@@ -325,7 +325,7 @@ export const IstihadhahDecisionTree: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Layers className="w-4 h-4 text-[#C2185B] dark:text-[#F06292]" />
                 <h3 className="text-xs font-semibold text-[#5C3A4E] dark:text-[#E8C5D8] tracking-wider uppercase">
-                  Katalog Lengkap 7 Golongan & Kasus Nyata PDF
+                  Katalog Lengkap 7 Golongan & Contoh Kasus
                 </h3>
               </div>
               <p className="text-xs text-[#5C3A4E]/80 dark:text-[#E8C5D8]/80 mt-1">
@@ -429,7 +429,7 @@ export const IstihadhahDecisionTree: React.FC = () => {
             {/* Skenario Kasus dari Dokumen PDF */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-[#C2185B] dark:text-[#F06292] mb-3">
-                Contoh Kasus & Perhitungan Nyata dari Resume PDF:
+                Contoh Kasus & Perhitungannya:
               </h4>
               <div className="space-y-4">
                 {selectedCategory.contohKasusPdf.map((kasus, idx) => (

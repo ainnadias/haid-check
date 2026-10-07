@@ -44,15 +44,6 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-[#2D1B25]/10 dark:border-[#F06292]/15 text-xs text-[#5C3A4E] dark:text-[#E8C5D8]">
           <div className="flex items-center gap-3">
             <span>© {new Date().getFullYear()} Fiqih Haid Interaktif. Mazhab Syafi'i.</span>
-            <span aria-hidden="true">·</span>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#2D1B25] dark:hover:text-[#FDF0F8] flex items-center gap-1 transition-colors"
-            >
-              <Github className="w-3.5 h-3.5" /> Repository
-            </a>
           </div>
 
           <button

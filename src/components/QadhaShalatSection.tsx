@@ -161,7 +161,7 @@ export const QadhaShalatSection: React.FC = () => {
               {/* Contoh Kasus Nyata PDF */}
               <div className="p-4 rounded-2xl bg-[#FDF0F5] dark:bg-[#2E1428] border border-[#2D1B25]/10 dark:border-[#F06292]/20 space-y-3 text-xs sm:text-sm">
                 <div className="font-bold text-[#C2185B] dark:text-[#F06292]">
-                  Contoh Kasus Resume PDF:
+                  Contoh Kasus:
                 </div>
                 <p className="text-[#5C3A4E] dark:text-[#E8C5D8] leading-relaxed">
                   Waktu Zuhur masuk pukul <strong>11.40</strong>. Seseorang menunda-nunda shalat sampai pukul <strong>12.30</strong> (ada jeda 50 menit yang leluasa). Ketika baru hendak wudhu/shalat jam 12.30, ternyata darah haid keluar.

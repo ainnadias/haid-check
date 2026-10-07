@@ -54,7 +54,7 @@ export const Kalkulator24Jam: React.FC = () => {
         {/* Preset Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
           <span className="text-xs font-medium text-[#5C3A4E] dark:text-[#E8C5D8] mr-2">
-            Contoh Kasus Resume PDF:
+            Contoh Kasus:
           </span>
           <button
             onClick={setPreset25Hours}

@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="text-lg md:text-xl font-bold tracking-tight text-[#2D1B25] dark:text-[#FDF0F8] flex items-center gap-2 cursor-pointer"
           >
             <span className="w-2.5 h-2.5 rounded-full bg-[#C2185B] dark:bg-[#F06292]" />
-            Fiqih Haid Interaktif
+            Haid Check
           </a>
 
           {/* Zone 2: Navigation Links */}
@@ -105,7 +105,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="px-3 py-1.5 text-xs font-semibold rounded-xl border border-[#2D1B25]/15 dark:border-[#F06292]/25 bg-white/80 dark:bg-white/5 hover:bg-[#FCEEF6] dark:hover:bg-[#4A1535] text-[#2D1B25] dark:text-[#FDF0F8] transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs"
               title="Kamus Istilah Fiqih"
             >
-              <BookOpen className="w-3.5 h-3.5 text-[#C2185B] dark:text-[#F06292]" />
+              {/* <BookOpen className="w-3.5 h-3.5 text-[#C2185B] dark:text-[#F06292]" /> */}
               <span className="hidden sm:inline">Glosarium</span>
             </button>
 
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="px-3 py-1.5 text-xs font-semibold rounded-xl border border-[#2D1B25]/15 dark:border-[#F06292]/25 bg-white/80 dark:bg-white/5 hover:bg-[#FCEEF6] dark:hover:bg-[#4A1535] text-[#2D1B25] dark:text-[#FDF0F8] transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs"
               title="Rangkuman Rumus Cepat"
             >
-              <FileText className="w-3.5 h-3.5 text-[#C2185B] dark:text-[#F06292]" />
+              {/* <FileText className="w-3.5 h-3.5 text-[#C2185B] dark:text-[#F06292]" /> */}
               <span className="hidden sm:inline">Rumus</span>
             </button>
 

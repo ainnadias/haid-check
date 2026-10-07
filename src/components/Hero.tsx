@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
 
         {/* Credit Badge Card */}
         <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl glass-panel text-xs md:text-sm text-[#2D1B25] dark:text-[#FDF0F8] mb-10 shadow-2xs border border-[#2D1B25]/10 dark:border-[#F06292]/25">
-          <BookMarked className="w-4 h-4 text-[#C2185B] dark:text-[#F06292]" />
+          {/* <BookMarked className="w-4 h-4 text-[#C2185B] dark:text-[#F06292]" /> */}
           <span>
             Narasumber: <strong>Ustadzah Jahidah Farhati, Lc</strong> (Resume Special Class #12 Akademi Muslim Indonesia)
           </span>

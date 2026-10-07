@@ -86,7 +86,7 @@ export const NifasDanHamilSection: React.FC = () => {
                   Dalam mazhab Syafi'i, jika nifas berhenti pada hari ke-35, perempuan tersebut <strong>harus mengalami masa suci minimal 15 hari</strong> sebelum darah berikutnya dapat dihukumi sebagai haid baru.
                 </p>
                 <div className="p-3 rounded-xl bg-[#FDF0F5] dark:bg-[#2E1428] text-xs border border-[#2D1B25]/10 dark:border-[#F06292]/20 text-[#2D1B25] dark:text-[#FDF0F8]">
-                  <strong>Contoh PDF:</strong> Jika nifas berhenti hari ke-35 lalu keesokan harinya darah keluar lagi, darah tersebut tidak langsung disebut haid, melainkan istihadhah penyempurna suci sampai genap 15 hari suci terlewati.
+                  <strong>Contoh:</strong> Jika nifas berhenti hari ke-35 lalu keesokan harinya darah keluar lagi, darah tersebut tidak langsung disebut haid, melainkan istihadhah penyempurna suci sampai genap 15 hari suci terlewati.
                 </div>
               </div>
             ) : (
@@ -99,7 +99,7 @@ export const NifasDanHamilSection: React.FC = () => {
                   Jika masa nifas telah mencapai maksimal 60 hari, kemudian terdapat jeda (meskipun hanya sedikit, misal 1 hari), dan pada hari ke-61, 62, atau 63 keluar darah kembali:
                 </p>
                 <div className="p-3 rounded-xl bg-[#FDF0F5] dark:bg-[#2E1428] text-xs border border-[#2D1B25]/10 dark:border-[#F06292]/20 text-[#2D1B25] dark:text-[#FDF0F8]">
-                  <strong>Kaidah PDF:</strong> Dalam kondisi ini <strong>TIDAK PERLU menunggu masa suci 15 hari</strong>. Darah yang keluar setelah jeda tersebut langsung dapat dihukumi sebagai <strong>HAID BARU</strong>.
+                  Dalam kondisi ini <strong>TIDAK PERLU menunggu masa suci 15 hari</strong>. Darah yang keluar setelah jeda tersebut langsung dapat dihukumi sebagai <strong>HAID BARU</strong>.
                 </div>
               </div>
             )}
@@ -151,7 +151,7 @@ export const NifasDanHamilSection: React.FC = () => {
           <div className="glass-panel p-6 sm:p-8 rounded-3xl space-y-4 border border-[#2D1B25]/10 dark:border-[#F06292]/25">
             <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#C2185B] dark:text-[#F06292]">
               <AlertCircle className="w-4 h-4 text-[#C2185B] dark:text-[#F06292]" />
-              Kaidah Krusial PDF
+              Kaidah
             </div>
             <h3 className="text-lg font-bold text-[#2D1B25] dark:text-[#FDF0F8]">
               Darah Lewat 15 Hari: Istihadhah Bukan Otomatis Hari ke-16

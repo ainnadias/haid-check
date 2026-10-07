@@ -80,7 +80,7 @@ export const TandaBerhentiFlowchart: React.FC = () => {
             </div>
 
             <div className="p-4 rounded-2xl bg-[#FDF0F5] dark:bg-[#2E1428] border border-[#2D1B25]/10 dark:border-[#F06292]/20 ml-8 mb-4 text-xs text-[#2D1B25] dark:text-[#FDF0F8] leading-relaxed">
-              <strong>Cara Cek yang Diajarkan di PDF:</strong> Pengecekan dilakukan pada <em>bagian dalam</em> tempat keluarnya darah, bukan sekadar melihat bagian luar pembalut. Gunakan kapas bersih yang sedikit dibasahi air dengan posisi jongkok pada setiap menjelang waktu shalat.
+              <strong>Cara Cek:</strong> Pengecekan dilakukan pada <em>bagian dalam</em> tempat keluarnya darah, bukan sekadar melihat bagian luar pembalut. Gunakan kapas bersih yang sedikit dibasahi air dengan posisi jongkok pada setiap menjelang waktu shalat.
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pl-8">

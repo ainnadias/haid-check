@@ -89,7 +89,7 @@ export const WarnaDarahSection: React.FC = () => {
             <div className="p-3.5 rounded-xl bg-[#FDF0F5] dark:bg-[#2E1428] border border-[#2D1B25]/10 dark:border-[#F06292]/20 text-xs text-[#2D1B25] dark:text-[#FDF0F8] flex items-start gap-2.5">
               <Info className="w-4 h-4 text-[#C2185B] dark:text-[#F06292] shrink-0 mt-0.5" />
               <div>
-                <strong>Contoh Dokumen Resume:</strong> {activeDetail.contohPdf}
+                <strong>Contoh:</strong> {activeDetail.contohPdf}
               </div>
             </div>
           </div>
