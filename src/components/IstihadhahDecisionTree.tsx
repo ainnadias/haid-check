@@ -1,7 +1,7 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { ISTIHADHAH_CATEGORIES } from '../data/istihadhahCases';
 import { checkTamyizConditions } from '../utils/fiqihCalculators';
-import { GitPullRequest, CheckCircle2, XCircle } from 'lucide-react';
+import { GitPullRequest, CheckCircle2, XCircle, ChevronLeft, ChevronRight, Layers } from 'lucide-react';
 
 export const IstihadhahDecisionTree: React.FC = () => {
   const [historyType, setHistoryType] = useState<'mubtadaah' | 'mutadah'>('mubtadaah');
@@ -22,7 +22,10 @@ export const IstihadhahDecisionTree: React.FC = () => {
     adaDarahKuatKeduaLebih15Hari: adaKuatKeduaLebih15
   });
 
-  const selectedCategory = ISTIHADHAH_CATEGORIES.find((c) => c.id === activeCategoryTab) || ISTIHADHAH_CATEGORIES[0];
+  const currentIndex = ISTIHADHAH_CATEGORIES.findIndex((c) => c.id === activeCategoryTab);
+  const selectedCategory = ISTIHADHAH_CATEGORIES[currentIndex] || ISTIHADHAH_CATEGORIES[0];
+  const prevCategory = currentIndex > 0 ? ISTIHADHAH_CATEGORIES[currentIndex - 1] : null;
+  const nextCategory = currentIndex < ISTIHADHAH_CATEGORIES.length - 1 ? ISTIHADHAH_CATEGORIES[currentIndex + 1] : null;
 
   return (
     <section id="istihadhah" className="py-12 md:py-16 border-t border-[#2D1B25]/10 dark:border-[#F06292]/20">
@@ -315,26 +318,78 @@ export const IstihadhahDecisionTree: React.FC = () => {
           </div>
         </div>
 
-        {/* 3. Detail 7 Kartu Golongan Istihadhah (Tab Navigation) */}
+        {/* 3. Detail 7 Kartu Golongan Istihadhah (Card Grid Selector) */}
         <div>
-          <div className="text-xs font-semibold text-[#5C3A4E] dark:text-[#E8C5D8] tracking-wider uppercase mb-4">
-            Katalog Lengkap 7 Golongan & Kasus Nyata PDF
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <Layers className="w-4 h-4 text-[#C2185B] dark:text-[#F06292]" />
+                <h3 className="text-xs font-semibold text-[#5C3A4E] dark:text-[#E8C5D8] tracking-wider uppercase">
+                  Katalog Lengkap 7 Golongan & Kasus Nyata PDF
+                </h3>
+              </div>
+              <p className="text-xs text-[#5C3A4E]/80 dark:text-[#E8C5D8]/80 mt-1">
+                Klik salah satu kartu di bawah untuk melihat rincian hukum dan simulasi kasusnya:
+              </p>
+            </div>
+            <span className="text-[11px] font-semibold px-3 py-1 rounded-full bg-[#FCEEF6] dark:bg-[#4A1535] text-[#C2185B] dark:text-[#F06292] border border-[#C2185B]/20 w-fit shrink-0">
+              Golongan {currentIndex + 1} dari {ISTIHADHAH_CATEGORIES.length}
+            </span>
           </div>
 
-          <div className="flex gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
-            {ISTIHADHAH_CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategoryTab(cat.id)}
-                className={`px-3.5 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all shrink-0 cursor-pointer shadow-2xs ${
-                  activeCategoryTab === cat.id
-                    ? 'bg-[#2D1B25] text-[#FDF0F5] dark:bg-[#C2185B] dark:text-white font-semibold'
-                    : 'bg-white/80 dark:bg-white/5 border border-[#2D1B25]/10 dark:border-[#F06292]/20 text-[#2D1B25] dark:text-[#FDF0F8] hover:bg-white/95'
-                }`}
-              >
-                {cat.nama}
-              </button>
-            ))}
+          {/* Grid Mini-Cards (Mudah dilihat & langsung bisa diklik tanpa geser) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 mb-6">
+            {ISTIHADHAH_CATEGORIES.map((cat, idx) => {
+              const isSelected = activeCategoryTab === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategoryTab(cat.id)}
+                  type="button"
+                  className={`text-left p-3.5 rounded-2xl transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between gap-3 ${
+                    isSelected
+                      ? 'bg-white/95 dark:bg-[#3D142C]/90 border-2 border-[#C2185B] dark:border-[#F06292] shadow-lg shadow-[#C2185B]/15 dark:shadow-[#F06292]/20 scale-[1.01]'
+                      : 'bg-white/60 dark:bg-white/5 border border-[#2D1B25]/10 dark:border-[#F06292]/15 hover:bg-white/90 dark:hover:bg-white/10 hover:border-[#C2185B]/40 dark:hover:border-[#F06292]/40 hover:-translate-y-0.5'
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <span
+                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 transition-colors ${
+                        isSelected
+                          ? 'bg-[#C2185B] text-white dark:bg-[#F06292] dark:text-[#1A0E17]'
+                          : 'bg-[#FCEEF6] text-[#C2185B] dark:bg-white/10 dark:text-[#F06292]'
+                      }`}
+                    >
+                      {idx + 1}
+                    </span>
+                    <span
+                      className={`text-[10px] px-2 py-0.5 rounded-md font-medium shrink-0 ${
+                        cat.apakahTamyiz
+                          ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20'
+                          : 'bg-amber-500/10 text-amber-800 dark:text-amber-200 border border-amber-500/20'
+                      }`}
+                    >
+                      {cat.apakahTamyiz ? 'Tamyiz' : 'Non-Tamyiz'}
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className="text-[11px] font-serif block text-[#C2185B]/80 dark:text-[#F06292]/80 leading-tight mb-1">
+                      {cat.arab}
+                    </span>
+                    <h4
+                      className={`text-xs font-bold leading-snug line-clamp-2 transition-colors ${
+                        isSelected
+                          ? 'text-[#C2185B] dark:text-[#F06292]'
+                          : 'text-[#2D1B25] dark:text-[#FDF0F8]'
+                      }`}
+                    >
+                      {cat.nama.replace(/^\d+\.\s*/, '')}
+                    </h4>
+                  </div>
+                </button>
+              );
+            })}
           </div>
 
           {/* Active Detail Card */}
@@ -397,6 +452,37 @@ export const IstihadhahDecisionTree: React.FC = () => {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Navigasi Golongan Sebelumnya / Selanjutnya */}
+            <div className="pt-4 border-t border-[#2D1B25]/10 dark:border-[#F06292]/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+              {prevCategory ? (
+                <button
+                  type="button"
+                  onClick={() => setActiveCategoryTab(prevCategory.id)}
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-white/5 border border-[#2D1B25]/10 dark:border-[#F06292]/20 text-xs font-semibold text-[#2D1B25] dark:text-[#FDF0F8] hover:bg-white dark:hover:bg-white/10 hover:border-[#C2185B]/30 transition-all cursor-pointer text-left group"
+                >
+                  <ChevronLeft className="w-4 h-4 text-[#C2185B] dark:text-[#F06292] shrink-0 transition-transform group-hover:-translate-x-0.5" />
+                  <div className="min-w-0">
+                    <span className="text-[10px] text-[#5C3A4E] dark:text-[#E8C5D8] block font-normal">Sebelumnya</span>
+                    <span className="line-clamp-1">{prevCategory.nama}</span>
+                  </div>
+                </button>
+              ) : <div />}
+
+              {nextCategory ? (
+                <button
+                  type="button"
+                  onClick={() => setActiveCategoryTab(nextCategory.id)}
+                  className="flex items-center justify-end gap-2 px-4 py-2.5 rounded-xl bg-white/70 dark:bg-white/5 border border-[#2D1B25]/10 dark:border-[#F06292]/20 text-xs font-semibold text-[#2D1B25] dark:text-[#FDF0F8] hover:bg-white dark:hover:bg-white/10 hover:border-[#C2185B]/30 transition-all cursor-pointer text-right ml-auto group"
+                >
+                  <div className="min-w-0">
+                    <span className="text-[10px] text-[#5C3A4E] dark:text-[#E8C5D8] block font-normal">Berikutnya</span>
+                    <span className="line-clamp-1">{nextCategory.nama}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-[#C2185B] dark:text-[#F06292] shrink-0 transition-transform group-hover:translate-x-0.5" />
+                </button>
+              ) : <div />}
             </div>
           </div>
         </div>
